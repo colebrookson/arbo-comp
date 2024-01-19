@@ -47,3 +47,6 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Data - for privacy reasons until data are complete
+/data/raw/*
