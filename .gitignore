@@ -1,5 +1,5 @@
 # DS store file - don't want this
-.DS_Store
+**/.DS_Store
 
 # History files
 .Rhistory
