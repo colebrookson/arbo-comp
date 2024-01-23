@@ -3,18 +3,21 @@
 # Date: 2024-01-23
 
 library(targets)
-library(tar_tarchetypes)
+library(tarchetypes)
+library(here)
 
-tar_options(packages = c("here", "magrittr", "readxl", "janitor", "readr"))
+tar_option_set(packages = c("magrittr", "readxl", "janitor", "readr"))
+
+source(here::here("./src/R/00_funs_data_cleaning.R"))
 
 
-# Define targets
-tar_target(target1, {
-    # Code for target1
-})
-
-tar_target(target2, {
-    # Code for target2
-})
-
-# Additional targets...
+# Define file targets ==========================================================
+list(
+  tar_target(raw_csu_data,
+    here::here("data", "raw", "csu_cdc_merged.xlsx"),
+    format = "file"
+  ),
+  tar_target(clean_csu_data,
+    clean_data(raw_csu_data, here::here("data", "clean"))
+  )
+)
