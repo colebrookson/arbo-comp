@@ -53,3 +53,4 @@ rsconnect/
 
 # Data - for privacy reasons until data are complete
 /data/raw/*
+/data/clean/*
