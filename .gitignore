@@ -52,5 +52,6 @@ po/*~
 rsconnect/
 
 # Data - for privacy reasons until data are complete
-/data/raw/*
-/data/clean/*
+/data/raw/*.csv
+/data/raw/*.xlsx
+/data/clean/*.csv
