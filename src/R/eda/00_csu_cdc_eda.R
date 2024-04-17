@@ -30,31 +30,42 @@ df <- data.frame(
         "small", "small", "big", "small", "small", "big", "big",
         "small", "small", "small"
     ),
-    test_1 = c(
+    test__1 = c(
         "cancer", "cancer", "heart", "TB", "heart", "cancer", "TB",
         "heart", "TB", "heart"
     ),
-    diagnostic_1 = c(
-        "cancer_1", "cancer_2", "heart_1", "TB_1", "heart_1",
-        "cancer_2", "TB_1", "heart_2", "TB_2", "heart_1"
+    diagnostic__1 = c(
+        "cancer_1", "cancer_2", "heart__1", "TB_1", "heart__1",
+        "cancer_2", "TB_1", "heart__2", "TB_2", "heart__1"
     ),
-    n_test_1 = c(12, 15, 93, 10, 20, 82, 83, 5, 9, 10),
-    n_pos_1 = c(8, 10, 87, 8, 17, 61, 62, 1, 4, 3),
-    test_2 = c(
+    n_tested__1 = c(12, 15, 93, 10, 20, 82, 83, 5, 9, 10),
+    n_pos__1 = c(8, 10, 87, 8, 17, 61, 62, 1, 4, 3),
+    test__2 = c(
         NA, NA, NA, "TB", "heart", "cancer", "TB", "heart", "TB",
         "heart"
     ),
-    diagnostic_2 = c(
-        NA, NA, NA, "TB_1", "heart_1",
-        "cancer_2", "TB_1", "heart_2", "TB_2", "heart_1"
+    diagnostic__2 = c(
+        NA, NA, NA, "TB_1", "heart__1",
+        "cancer_2", "TB_1", "heart__2", "TB_2", "heart__1"
     ),
-    n_test_2 = c(NA, NA, NA, 10, 20, 82, 83, 5, 9, 10),
-    n_pos_2 = c(NA, NA, NA, 8, 17, 61, 62, 1, 4, 3),
-    test_3 = c(NA, "TB", "heart", NA, "TB", "heart", "TB", "heart", "TB", NA),
-    diagnostic_3 = c(
-        NA, "TB_1", "heart_1", NA, "heart_1", "cancer_2", "TB_1",
-        "heart_2", "TB_2", NA
+    n_tested__2 = c(NA, NA, NA, 10, 20, 82, 83, 5, 9, 10),
+    n_pos__2 = c(NA, NA, NA, 8, 17, 61, 62, 1, 4, 3),
+    test__3 = c(NA, "TB", "heart", NA, "TB", "heart", "TB", "heart", "TB", NA),
+    diagnostic__3 = c(
+        NA, "TB_1", "heart__1", NA, "heart__1", "cancer_2", "TB_1",
+        "heart__2", "TB_2", NA
     ),
-    n_test_3 = c(NA, 15, 93, NA, 20, 82, 83, 5, 9, NA),
-    n_pos_3 = c(NA, 10, 87, NA, 17, 61, 62, 1, 4, NA)
+    n_tested__3 = c(NA, 15, 93, NA, 20, 82, 83, 5, 9, NA),
+    n_pos__3 = c(NA, 10, 87, NA, 17, 61, 62, 1, 4, NA)
+)
+
+df_long <- tidyr::pivot_longer(
+    df,
+    cols = c(
+        "test__1", "diagnostic__1", "n_tested__1", "n_pos__1", "test__2",
+        "diagnostic__2", "n_tested__2", "n_pos__2", "test__3", "diagnostic__3",
+        "n_tested__3", "n_pos__3"
+    ),
+    names_to = c("test", "diagnostic", "n_tested", "n_pos"),
+    names_sep = "__"
 )
