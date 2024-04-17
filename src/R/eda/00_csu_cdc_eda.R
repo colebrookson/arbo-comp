@@ -4,6 +4,10 @@
 
 library(magrittr)
 
+raw_csu_data <- readxl::read_excel(targets::tar_read(raw_csu_data),
+    sheet = "all",
+    col_names = TRUE, skip = 1
+)
 df <- readr::read_csv(here::here("./data/clean/csu-cdc-merged.csv"))
 
 # generate some summaries of the data
@@ -17,3 +21,4 @@ length(unique(df$viral_strain))
 # and hosts?
 
 # first for all viruses
+epitools::pois.exact(df$num)
