@@ -14,3 +14,14 @@ This work is licensed under a
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+
+## Some information about the data herein:
+The number of unique PubMed ID's in these data: 59 
+
+ The number of unique vector spp. in these data: 12 
+
+ The number of unique vector origin countries in these data: 6 
+
+ The number of unique viruses in these data: 17 
+
+ The number of unique viral strains in these data: 169 

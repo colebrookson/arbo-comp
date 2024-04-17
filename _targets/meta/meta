@@ -1,4 +1,4 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-clean_csu_data|stem|cad7b2bfc29867c1|99b80ff46e8c207f|caf33f50753a40a8|219628183||t19745.7808092678s|36609bda088fcb65|18326|rds|local|vector|||0.18||
-clean_data|function|ca8f87a987e2ad96|||||||||||||||
+clean_csu_data|stem|cad7b2bfc29867c1|99b80ff46e8c207f|0baabf0d8819ba41|219628183||t19830.7647068201s|36609bda088fcb65|18326|rds|local|vector|||0.307||
+clean_data|function|eb120bc6ba46bec3|||||||||||||||
 raw_csu_data|stem|b7d581f2952b326a|dd6dabf91c8dc58e|ef46db3751d8e999|1724434826|/Users/colebrookson/github/arbo-comp/data/raw/csu_cdc_merged.xlsx|t19745.7807237829s|1d932ac379c250d7|197925|file|local|vector|||0.089||
